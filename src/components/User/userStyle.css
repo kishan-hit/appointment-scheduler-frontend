@@ -1,0 +1,11 @@
+.doctor-div{
+    border: 1px solid;
+}
+.booking-btn{
+    padding: 10px 20px;
+    width: fit-content;
+    border: 1px solid black;
+}
+.booking-btn:hover{
+    cursor: pointer;
+}

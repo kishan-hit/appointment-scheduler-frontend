@@ -1,0 +1,12 @@
+.patientdiv{
+    margin: 5px;
+    border: 1px solid black;
+}
+.patientdetaildiv{
+    width: fit-content;
+    background-color: blue;
+    color: white;
+}
+.patientdetaildiv:hover{
+    cursor: pointer;
+}
