@@ -16,10 +16,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/*  <Route path='/' element=  
-          //  {
-          //     (user && user._id) ? <Calendar startingDate={new Date()}/> : <Login setLoginUser={setLoginUser}/>
-  //  }/>  */}
+           <Route path='/' element=  
+           {
+              (user && user._id) ? <Calendar startingDate={new Date()}/> : <Login setLoginUser={setLoginUser}/>
+   }/> 
           <Route path='/booking' element={<Calendar startingDate={new Date()}/>}/>
           <Route path='/login' element={<Login setLoginUser={setLoginUser}/>}/>
           <Route path='/register' element={<Register/>} />
@@ -30,7 +30,7 @@ function App() {
           <Route path='/patient-detail' element={<PatientDetails/>} />
         </Routes>
       </Router>
-  {/*<Calendar startingDate={new Date()}/>*/}
+  {/* <Calendar startingDate={new Date()}/> */}
 
     </div>
   );
