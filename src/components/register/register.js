@@ -38,7 +38,7 @@ const Register = () =>{
             role : urole
         }
         if(name && email && password && (password===reEnterPassword)){
-            axios.post("http://localhost:8000/newuser/register",data)
+            axios.post("https://appointment-scheduler-pahi.onrender.com/newuser/register",data)
             .then(res=>{
                 alert(res.data.message);
                 window.location.href = "/login"

@@ -16,7 +16,7 @@ const UserBooking = (props) => {
             date: props.selectedDay
         }
         async function getData() {
-            const res = await axios.post("http://localhost:8000/doctorAvailability", data)
+            const res = await axios.post("https://appointment-scheduler-pahi.onrender.com/doctorAvailability", data)
             if (res.data) {
                 setdoctordata(res.data.availability)
             }
@@ -40,7 +40,7 @@ const UserBooking = (props) => {
             start_time : data.start_time,
             end_time : data.end_time
         }
-        const res = await axios.post("http://localhost:8000/doctorAppointment/book-appointment",sdata)
+        const res = await axios.post("https://appointment-scheduler-pahi.onrender.com/doctorAppointment/book-appointment",sdata)
         if(res.data){
             alert("Appointment Booked")
             props.togglePageShow(null)

@@ -22,7 +22,7 @@ const Login = ({setLoginUser}) =>{
     }
 
     const login = () => {
-        axios.post("http://localhost:8000/newuser/login",user)
+        axios.post("https://appointment-scheduler-pahi.onrender.com/newuser/login",user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)

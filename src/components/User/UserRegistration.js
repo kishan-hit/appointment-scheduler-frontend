@@ -34,7 +34,7 @@ const UserRegistration = () => {
     }
 
     const register = () => {
-        axios.post("http://localhost:8000/user/register-user", user)
+        axios.post("https://appointment-scheduler-pahi.onrender.com/user/register-user", user)
             .then(res => {
                 alert(res.data.message);
                 window.location.href = "/user-home"

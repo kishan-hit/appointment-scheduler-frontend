@@ -8,7 +8,7 @@ const PatientDetails = () => {
     useEffect(() => {
         console.log(location.state.email)
       async function getData(){
-        const res = await axios.post("http://localhost:8000/user/userDetail",{email : location.state.email})
+        const res = await axios.post("https://appointment-scheduler-pahi.onrender.com/user/userDetail",{email : location.state.email})
         if(res.data){
             setpatient(res.data.user)
         }

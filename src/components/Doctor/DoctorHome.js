@@ -9,7 +9,7 @@ const DoctorHome = () => {
     const [patient, setpatient] = useState([])
     useEffect(() => {
       async function getData(){
-        const res = await axios.post("http://localhost:8000/doctorAppointment/get-all-appointment",{email : udata.email})
+        const res = await axios.post("https://appointment-scheduler-pahi.onrender.com/doctorAppointment/get-all-appointment",{email : udata.email})
         if(res.data){
             setpatient(res.data.appointments)
         }
