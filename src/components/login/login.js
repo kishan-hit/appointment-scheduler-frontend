@@ -22,16 +22,16 @@ const Login = ({setLoginUser}) =>{
     }
 
     const login = () => {
-        axios.post("https://appointment-scheduler-pahi.onrender.com/newuser/login",user)
+        axios.post("http://localhost:8000/newuser/login",user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)
             localStorage.setItem('user', JSON.stringify(res.data.user));
             console.log(res.data)
             if(res.data.user.role=="user"){
-                navigate("/user-home")
+                navigate("/user-registration")
             }else{
-                navigate("/doctor-home")
+                navigate("/doctor-registration")
             }
         });
     }

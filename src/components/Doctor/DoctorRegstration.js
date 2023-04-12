@@ -36,7 +36,7 @@ const DoctorRegstration = () => {
     }
 
     const register = () => {
-        axios.post("https://appointment-scheduler-pahi.onrender.com/doctor/register-doctor", user)
+        axios.post("http://localhost:8000/doctor/register-doctor", user)
             .then(res => {
                 alert(res.data.message);
                 window.location.href = "/booking"

@@ -30,7 +30,7 @@ const Calendar = ({ startingDate }) => {
                     email : location.state.email
                 }
                 console.log(data)
-                const res = await axios.get(`https://appointment-scheduler-pahi.onrender.com/doctor/doctorDetail?email=${location.state.email}`)
+                const res = await axios.get(`http://localhost:8000/doctor/doctorDetail?email=${location.state.email}`)
                 if(res.data){
                     setdoctor(res.data.doctor)
                 }

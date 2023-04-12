@@ -8,7 +8,8 @@ const UserHome = () => {
     const navigate = useNavigate()
     useEffect(() => {
         async function getDoctor() {
-            const res = await axios.get("https://appointment-scheduler-pahi.onrender.com/doctor/get-doctor")
+            const res = await axios.get("http://localhost:8000/doctor/get-doctor")
+            console.log(res)
             if(res.data){
                 setdoctors(res.data.doctors)
             }else{

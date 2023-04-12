@@ -52,7 +52,7 @@ function BasicForm(props) {
                 start_time: stdate,
                 end_time: endate
             }
-            const res = await axios.post(`https://appointment-scheduler-pahi.onrender.com/doctorAvailability/${user.duration}`, data)
+            const res = await axios.post(`http://localhost:8000/doctorAvailability/${user.duration}`, data)
 
             if (res.data) {
                 props.togglePageShow(null)
